@@ -8,15 +8,15 @@ import (
 )
 
 var (
-	Revision = "dev"
-	Version  = "dev"
+	Author  = "MiguelNdeCarvalho"
+	Version = "0.1.0"
 )
 
 func getVersion() string {
-	return fmt.Sprintf(`Version: %s
-Revision: %s
-OS: %s
-Arch: %s`, Version, Revision, runtime.GOOS, runtime.GOARCH)
+	return fmt.Sprintf(`DeskPi-CLI v%s
+Platform: %s/%s
+GoVersion: %s
+Made by: %s`, Version, runtime.GOOS, runtime.GOARCH, runtime.Version(), Author)
 }
 
 var versionCmd = &cobra.Command{

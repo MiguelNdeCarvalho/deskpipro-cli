@@ -76,6 +76,8 @@ var fanCLISet = &cobra.Command{
 	},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		fmt.Print("Fan Control Daemon")
+
+		fanSet(args[0])
 		return nil
 	},
 }

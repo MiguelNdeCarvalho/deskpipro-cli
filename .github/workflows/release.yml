@@ -1,4 +1,4 @@
-name: Release Docker Image with new Tag
+name: release
 
 on:  
   push:
@@ -6,7 +6,7 @@ on:
       - '*'
 
 jobs:
-  release-docker:
+  go-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,7 +20,6 @@ jobs:
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
         with:
-          distribution: goreleaser
           version: latest
           args: release --rm-dist
         env:

@@ -1,4 +1,4 @@
-module github.com/MiguelNdeCarvalho/deskpi-cli
+module github.com/MiguelNdeCarvalho/deskpipro-cli
 
 go 1.17
 

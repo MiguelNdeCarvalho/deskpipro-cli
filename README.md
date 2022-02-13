@@ -1,2 +1,2 @@
-# deskpi-cli
-Unofficial approach to control DeskpiPro FAN and Safe shutdown
+# DeskPiPro-CLI
+Unofficial approach to control DeskpiPro devices.

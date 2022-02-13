@@ -11,12 +11,12 @@ import (
 
 var (
 	Author     = "MiguelNdeCarvalho"
-	Repository = "deskpi-cli"
+	Repository = "DeskPiPro-CLI"
 	Version    = "0.1.0"
 )
 
 func getVersion() string {
-	versionDialog := fmt.Sprintf("DeskPi-CLI: v%s\nPlatform: %s/%s\nGoVersion: %s",
+	versionDialog := fmt.Sprintf("DeskPiPro-CLI: v%s\nPlatform: %s/%s\nGoVersion: %s",
 		Version, runtime.GOOS, runtime.GOARCH, runtime.Version(),
 	)
 
@@ -37,7 +37,7 @@ func getVersion() string {
 	}
 
 	if currentVersion.LessThan(latesVersion) {
-		versionDialog += fmt.Sprintf("\n\n\033[33mYour version of Deskpi-CLI is outdated.\n"+
+		versionDialog += fmt.Sprintf("\n\n\033[33mYour version of DeskPiPro-CLI is outdated.\n"+
 			"Please update to the latest: v%s by downloading from: \nhttps://github.com/%s"+
 			"/%s/releases\033[0m", latesVersion.Original(), Author, Repository,
 		)

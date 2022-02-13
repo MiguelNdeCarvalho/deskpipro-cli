@@ -9,9 +9,9 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "deskpi-cli",
-	Short: "DeskPi-CLI is an Unofficial tool to control DeskPi devices",
-	Long:  "DeskPi-CLI is an Unofficial tool to control DeskPi devices",
+	Use:   "deskpipro-cli",
+	Short: "DeskPiPro-CLI is an Unofficial tool to control DeskPiPro devices",
+	Long:  "DeskPiPro-CLI is an Unofficial tool to control DeskPiPro devices",
 }
 
 func Execute() {

@@ -3,6 +3,10 @@ package cmd
 import (
 	"fmt"
 	"io/ioutil"
+	"log"
+	"math"
+	"os"
+	"strconv"
 )
 
 func fanSet(value string) {
@@ -19,4 +23,21 @@ func fanSet(value string) {
 	if err != nil {
 		fmt.Println(err)
 	}
+}
+
+func getTemp() int {
+	COM := "/sys/class/thermal/thermal_zone0/temp"
+
+	data, err := os.ReadFile(COM)
+	if err != nil {
+		log.Fatal(err)
+	}
+	tempInt, err := strconv.ParseFloat(string(data), 64)
+
+	if err != nil {
+		fmt.Errorf("Error when converting Temperature to Float")
+	}
+
+	tempInt = math.Round(tempInt / 1000) // Convert to Celsius and get integer number
+	return int(tempInt)
 }

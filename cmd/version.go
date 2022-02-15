@@ -12,7 +12,7 @@ import (
 var (
 	Author     = "MiguelNdeCarvalho"
 	Repository = "DeskPiPro-CLI"
-	Version    = "0.1.0"
+	Version    = "Dev Build"
 )
 
 func getVersion() string {

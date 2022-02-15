@@ -8,6 +8,11 @@ builds:
       - CGO_ENABLED=0
     goos:
       - linux
+    goarch:
+      - arm
+      - arm64
+    goarm:
+      - 7
 archives:
   - replacements:
       linux: Linux

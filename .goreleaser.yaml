@@ -1,3 +1,4 @@
+project_name: deskpipro-cli
 before:
   hooks:
     - go mod tidy

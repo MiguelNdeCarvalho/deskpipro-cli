@@ -16,7 +16,8 @@ builds:
     goarm:
       - 7
 archives:
-  - replacements:
+  - format: zip
+    replacements:
       linux: Linux
 checksum:
   name_template: 'checksums.txt'

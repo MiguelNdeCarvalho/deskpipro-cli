@@ -17,15 +17,24 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      
-      - name: Lint Code Base
+      - name: Lint go code
+        uses: golangci/golangci-lint-action@v2
+  lint-files:
+    name: Lint other files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Lint other files
         uses: github/super-linter/slim@v4
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GO: false
   build-code:
-    name: Build code
+    name: Test code build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

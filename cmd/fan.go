@@ -35,7 +35,7 @@ func getTemp() int {
 	tempInt, err := strconv.ParseFloat(string(data), 64)
 
 	if err != nil {
-		fmt.Errorf("Error when converting Temperature to Float")
+		log.Fatal("Error when converting Temperature to Float")
 	}
 
 	tempInt = math.Round(tempInt / 1000) // Convert to Celsius and get integer number

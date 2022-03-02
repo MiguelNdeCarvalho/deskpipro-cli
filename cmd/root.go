@@ -29,6 +29,8 @@ func init() {
 	fanCLI.AddCommand(fanCLIDaemon)
 	fanCLI.AddCommand(fanCLISet)
 	fanCLI.AddCommand(fanCLIStop)
+
+	checkPi()
 }
 
 var fanCLI = &cobra.Command{

@@ -48,7 +48,7 @@ jobs:
           go-version: 1.17
 
       - name: Run GoReleaser without release
-        uses: goreleaser/goreleaser-action@v2
+        uses: goreleaser/goreleaser-action@v5
         with:
           version: latest
           args: build --rm-dist --skip-validate
